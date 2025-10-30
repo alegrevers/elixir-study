@@ -3,9 +3,9 @@ import Config
 # Configuração do Ecto/PostgreSQL
 config :library_api, LibraryApi.Repo,
   database: "library_api_#{config_env()}",
-  username: "postgres",
-  password: "postgres",
-  hostname: "localhost",
+  username: System.get_env("DATABASE_USERNAME") || "postgres",
+  password: System.get_env("DATABASE_PASSWORD") || "postgres",
+  hostname: System.get_env("DATABASE_HOSTNAME") || "localhost",
   port: 5432,
   pool_size: 10
 

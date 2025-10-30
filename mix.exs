@@ -21,19 +21,20 @@ defmodule LibraryApi.MixProject do
 
   defp deps do
     [
+      {:dotenvy, "~> 0.8.0"},
       # Phoenix Framework para API REST
       {:phoenix, "~> 1.7.10"},
       {:phoenix_ecto, "~> 4.4"},
       {:plug_cowboy, "~> 2.6"},
-      
+
       # Bancos de dados
       {:ecto_sql, "~> 3.10"},
       {:postgrex, ">= 0.0.0"},
       {:mongodb_driver, "~> 1.1"},
-      
+
       # JSON
       {:jason, "~> 1.4"},
-      
+
       # Testing
       {:ex_machina, "~> 2.7", only: :test}
     ]

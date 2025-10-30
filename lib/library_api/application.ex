@@ -21,7 +21,7 @@ defmodule LibraryApi.Application do
       # MongoDB Connection - Pool de conexões
       {Mongo, [
         name: :mongo,
-        url: "mongodb://localhost:27017/library_logs",
+        url: System.get_env("MONGODB_URL") || "mongodb://localhost:27017/library_logs",
         pool_size: 10
       ]},
 
