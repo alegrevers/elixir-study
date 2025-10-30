@@ -88,7 +88,7 @@ defmodule LibraryApiWeb.BookController do
 
         conn
         |> put_status(:no_content)
-        |> json(%{})
+        |> send_resp(204, "")
 
       {:error, :not_found} ->
         conn

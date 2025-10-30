@@ -7,6 +7,8 @@ defmodule LibraryApi.Books.Book do
   Demonstra validações e transformações de dados.
   """
 
+  @derive {Jason.Encoder, only: [:id, :title, :author, :isbn, :year, :available, :inserted_at, :updated_at]}
+
   schema "books" do
     field :title, :string
     field :author, :string

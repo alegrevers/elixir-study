@@ -5,12 +5,16 @@ defmodule LibraryApi.MixProject do
     [
       app: :library_api,
       version: "0.1.0",
+      elixirc_paths: elixirc_paths(Mix.env()),
       elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
-      aliases: aliases()
+      aliases: aliases(),
     ]
   end
+
+  defp elixirc_paths(:test), do: ["lib", "test/support"]
+  defp elixirc_paths(_), do: ["lib"]
 
   def application do
     [

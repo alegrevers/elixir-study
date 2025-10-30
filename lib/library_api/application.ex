@@ -22,7 +22,8 @@ defmodule LibraryApi.Application do
       {Mongo, [
         name: :mongo,
         url: System.get_env("MONGODB_URL") || "mongodb://localhost:27017/library_logs",
-        pool_size: 10
+        pool_size: 10,
+        ssl_opts: [verify: :verify_none]
       ]},
 
       # GenServer para cache de estatísticas (demonstra modelo de ATORES)

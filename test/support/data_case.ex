@@ -1,8 +1,4 @@
 defmodule LibraryApi.DataCase do
-  @moduledoc """
-  Case template para testes que requerem acesso ao banco de dados.
-  """
-
   use ExUnit.CaseTemplate
 
   using do

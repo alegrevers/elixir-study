@@ -1,8 +1,4 @@
 defmodule LibraryApiWeb.ConnCase do
-  @moduledoc """
-  Case template para testes de controllers.
-  """
-
   use ExUnit.CaseTemplate
 
   using do
@@ -10,8 +6,6 @@ defmodule LibraryApiWeb.ConnCase do
       import Plug.Conn
       import Phoenix.ConnTest
       import LibraryApiWeb.ConnCase
-
-      alias LibraryApiWeb.Router.Helpers, as: Routes
 
       @endpoint LibraryApiWeb.Endpoint
     end
